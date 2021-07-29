@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{setspace}
+\onehalfspacing{}
+
+\usepackage{subfiles}
+\usepackage{ifthen}
+
+% Equations
+\usepackage{mathtools,amssymb,amsfonts}
+\usepackage{bm, bbm}
+
+% Images
+\usepackage{graphicx}
+
+% Table
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{longtable}
+
+% BibTeX
+\usepackage[longnamesfirst]{natbib}
+\usepackage{hyperref}
+
+\begin{document}
+\title{BibTeX Demo}
+\author{Nicetak}
+\date{\today}
+\maketitle
+
+% For Subfiles with BibTeX
+\newboolean{isMain}
+\setboolean{isMain}{true}
+
+% Body
+\subfile{1_intro}
+\subfile{2_body}
+\subfile{3_concl}
+
+% Reference
+\newpage
+\bibliography{bibtex-demo.bib}
+\bibliographystyle{econ-aea.bst}
+
+% Appendix
+\newpage
+\part*{Appendix}
+\subfile{99_appendix}
+
+\end{document}

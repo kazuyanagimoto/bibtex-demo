@@ -1,0 +1,16 @@
+\documentclass[./main]{subfiles}
+\newboolean{isMain}
+\setboolean{isMain}{false}
+
+\begin{document}
+\section{Introduction}
+I want to cite \citet{chettyAreMicroMacro2011}
+
+\ifthenelse{\boolean{isMain}}{ %pass 
+}{ %else 
+    \bibliography{bibtex-demo.bib}
+    \bibliographystyle{econ-aea.bst} 
+}
+
+
+\end{document}

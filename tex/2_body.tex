@@ -1,0 +1,18 @@
+\documentclass[./main]{subfiles}
+\newboolean{isMain}
+\setboolean{isMain}{false}
+
+\begin{document}
+\section{Body}
+
+Here, I want to cite \citet{pikettyDistributionalNationalAccounts2018b} 
+and \citet{chettyAreMicroMacro2011} again.
+
+\ifthenelse{\boolean{isMain}}{ %pass 
+}{ %else 
+    \bibliography{bibtex-demo.bib}
+    \bibliographystyle{econ-aea.bst} 
+}
+
+
+\end{document}

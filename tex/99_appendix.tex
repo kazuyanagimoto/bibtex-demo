@@ -1,0 +1,16 @@
+\documentclass[./main]{subfiles}
+\newboolean{isMain}
+\setboolean{isMain}{false}
+
+\begin{document}
+\section{Appendix}
+This is Appendix.
+
+\ifthenelse{\boolean{isMain}}{ %pass 
+}{ %else 
+    \bibliography{bibtex-demo.bib}
+    \bibliographystyle{econ-aea.bst} 
+}
+
+
+\end{document}
